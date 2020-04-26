@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">SignupTrailTask</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <% if current_user.present? %>
+        <li class="nav-item active">
+          <a class="nav-link" href="#"><%= current_user.full_name%> <span class="sr-only">(current)</span></a>
+        </li>
+        <% if params[:action] == "show" %>
+          <li class="nav-item">
+            <%= link_to "Edit", edit_user_path(current_user), class: "nav-link" %>
+          </li>
+        <% end %>
+        <li class="nav-item">
+          <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+        </li>
+      <% else %>
+        <%= link_to "Sign up", '/users/sign_up', class: "nav-link" %>
+      <% end %>
+    </ul>
+  </div>
+</nav>
