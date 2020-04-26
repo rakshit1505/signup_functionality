@@ -13,4 +13,4 @@ development:
 
 production:
   <<: *default
- 
+  database: signup_prod_db
