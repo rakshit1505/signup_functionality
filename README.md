@@ -5,20 +5,19 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* System dependencies 
+  - Install RVM (Ruby Version Manager)
+  - Install ruby version 2.5.3
 
-* System dependencies
+* Ruby version (2.5.3)
 
-* Configuration
+* Rails version (5.2)
 
-* Database creation
+* Configuration 
+  - bundle install
 
-* Database initialization
+* Database creation (rake db:create)
 
-* How to run the test suite
+* Database migration (rake db:migrate)
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Run server (rails s) 
